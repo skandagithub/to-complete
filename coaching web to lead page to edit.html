@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Coaching Management System</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="C:\Users\slk\Desktop\bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<style>
+	body {
+		font-family: Arial, Helvetica, sans-serif;
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+
+	/* style the container */
+	.container {
+		position: relative;
+		border-radius: 5px;
+		background-color: #f2f2f2;
+		padding: 20px 0 30px 0;
+	}
+
+	/* style inputs and link buttons */
+	input, .btn, select, textarea {
+		width: 100%;
+		padding: 12px;
+		border: none;
+		border-radius: 4px;
+		margin: 5px 0;
+		opacity: 0.85;
+		display: inline-block;
+		font-size: 17px;
+		line-height: 20px;
+		text-decoration: none; /* remove underline from anchors */
+	}
+
+	input:hover, select:hover, .btn:hover {
+		opacity: 1;
+	}
+
+	/* add appropriate colors to fb, twitter and google buttons */
+	.fb {
+		width: 20%;
+		background-color: #3B5998;
+		color: white;
+		float: right;
+		position:relative;
+		top:0px;
+		bottom:0px;
+		right:5px;
+		
+	}
+	
+	.twitter {
+		width: 20%;
+		background-color: #55ACEE;
+		color: white;
+		float: right;
+		position:relative;
+		top:0px;
+		bottom:0px;
+		right:10px;
+		
+	}
+
+	.google {
+		width: 20%;
+		background-color: #dd4b39;
+		color: white;
+		float: right;
+		position:relative;
+		top:0px;
+		bottom:0px;
+		right:15px;
+	}
+
+	/* style the submit button */
+	input[type=submit] {
+		background-color: #4CAF50;
+		color: white;
+		cursor: pointer;
+	}
+
+	input[type=submit]:hover {
+		background-color: #45a049;
+	}
+
+	/* Two-column layout */
+	.col {
+		float: center;
+		width: 50%;
+		margin: auto;
+		padding: 0 50px;
+		margin-top: 6px;
+	}
+
+	/* Clear floats after the columns */
+	.row:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	/* vertical line */
+	<!-- .vl {
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%);
+		border: 2px solid #ddd;
+		height: 536px;
+	} -->
+
+	/* text inside the vertical line */
+	<!-- .vl-innertext {
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		background-color: #f1f1f1;
+		border: 1px solid #ccc;
+		border-radius: 50%;
+		padding: 8px 10px;
+	} -->
+
+	/* hide some text on medium and large screens */
+	.hide-md-lg {
+		display: none;
+	}
+
+	/* bottom container */
+	.bottom-container {
+		text-align: center;
+		background-color: #666;
+		border-radius: 0px 0px 4px 4px;
+	}
+
+	/* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
+	@media screen and (max-width: 650px) {
+		.col {
+			width: 100%;
+			margin-top: 0;
+		}
+		/* hide the vertical line */
+		.vl {
+			display: none;
+		}
+		/* show the hidden text on small screens */
+		.hide-md-lg {
+			display: block;
+			text-align: center;
+		}
+	}
+
+	.example1 {
+	 height: 50px;	
+	 overflow: hidden;
+	 position: relative;
+	}
+	.example1 h3 {
+	 font-size: 2em;
+	 color: limegreen;
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+	 margin: 0;
+	 line-height: 50px;
+	 text-align: center;
+	 /* Starting position */
+	 -moz-transform:translateX(100%);
+	 -webkit-transform:translateX(100%);	
+	 transform:translateX(100%);
+	 /* Apply animation to this element */	
+	 -moz-animation: example1 15s linear infinite;
+	 -webkit-animation: example1 15s linear infinite;
+	 animation: example1 15s linear infinite;
+	}
+	/* Move it (define the animation) */
+	@-moz-keyframes example1 {
+	 0%   { -moz-transform: translateX(100%); }
+	 100% { -moz-transform: translateX(-100%); }
+	}
+	@-webkit-keyframes example1 {
+	 0%   { -webkit-transform: translateX(100%); }
+	 100% { -webkit-transform: translateX(-100%); }
+	}
+	@keyframes example1 {
+	 0%   { 
+	 -moz-transform: translateX(100%); /* Firefox bug fix */
+	 -webkit-transform: translateX(100%); /* Firefox bug fix */
+	 transform: translateX(100%); 		
+	 }
+	 100% { 
+	 -moz-transform: translateX(-100%); /* Firefox bug fix */
+	 -webkit-transform: translateX(-100%); /* Firefox bug fix */
+	 transform: translateX(-100%); 
+	 }
+	}
+
+	img {
+	  border: 1px solid #ddd;
+	  border-radius: 4px;
+	  padding: 5px;
+	  height:400px;
+	  width: 600px;
+	}
+
+	.geek1{
+	font-size:70px;
+	font-family:monotype corsiva;
+	color:cyan;
+	}
+
+	body {
+		  /* background-image: linear-gradient(to top, #09203f 0%, #537895 100%); */
+		  background-image:url("C:\\Users\\slk\\Desktop\\drnk lab bg.png");
+		   background-image:url(" https://indiadidac.org/wp-content/uploads/2019/03/education-1-1.jpg");
+		   
+		   
+		 
+		  background-repeat:no-repeat;
+		  background-size:cover;    
+	} 
+	  
+	</style>
+	
+</head>
+
+<body>
+
+	<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" target="_blank" [] autocomplete="off">
+	<input type=hidden name="oid" value="00D2w000000FJQK">
+	<input type=hidden name="retURL" value="http://www.indusind.com/content/dam/indusind/desktop/nexxt/images/thank-you.png">
+	
+	<br>
+
+	
+	<br><br><br><br><br>
+	
+	<div class="example1">
+	<h3>seats filling fast!!!</h3>
+	</div>
+			
+	<div class="row">
+
+	<!-- <div class="vl">
+		<span class="vl-innertext">or</span>
+	</div> -->
+
+	<div class="col"> 
+	<font  color="black"><center><h2>register for Free demo Class</h2><center></font>	
+	<div style="height:484px; width: 100%; overflow:auto">
+	<select name="salutation">
+		<option value="">--Salutation--</option>
+		<option value="Mr.">Mr.</option>
+		<option value="Ms.">Ms.</option>
+		<option value="Mrs.">Mrs.</option>
+		<option value="Dr.">Dr.</option>
+		<option value="Prof.">Prof.</option>
+	</select>
+
+	<input type="text" name="first_name" placeholder="First Name"> 
+	<input type="text" name="last_name" placeholder="Last Name"> 
+
+	<select name="00N2w000001rOPf">
+		<option value="">--Gender--</option>
+		<option value="Male">Male</option>
+		<option value="Female">Female</option>
+		<option value="Other">Other</option>
+	</select>
+
+	<input type="email" name="email" pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" title="Enter vaild email-Id" placeholder="Email">
+	<input type="tel" pattern="^\+91 \d{10}$" name="mobile" placeholder="Mobile Number (format: +91 xxxxxxxxxx)"> 
+	<input type="text" name="street" placeholder="Street">
+	<input type="text" name="city" placeholder="City">
+	<input type="text" name="state" placeholder="State/Province">
+	<input type="text" name="country" placeholder="Country">
+	<input type="text" name="zip" placeholder="Pincode" pattern="[0-9]{6}" maxlength="6">
+	<input type="text" name="00N2w000001rODp" placeholder="Username">
+	<input type="password" name="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+	<input type="submit" value="register here">
+	</div>
+	</div>
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------->
+	
+	<!-- <div class="col">
+	<font  color="white"><center><h2>Place Your Order</h2><center></font>
+	<input type="text" id="00N2w000001rODp" name="00N2w000001rODp" placeholder="Username">
+	<input type="tel" pattern="^\+91 \d{10}$" id="phone" name="phone" placeholder="Phone Number (format: +91 xxxxxxxxxx)">
+				
+	<select id="00N2w000001rYaM" name="00N2w000001rYaM">
+		<option value="None">--None--</option>
+		<option value="The Original">The Original</option>
+		<option value="Banana Twist">Banana Twist</option>
+		<option value="Mango Indulge">Mango Indulge</option>
+		<option value="Mad Macho">Mad Macho</option>
+		<option value="Nature Pick">Nature Pick</option>
+	</select>
+				
+	<input type="number" id="00N2w000001rYaW" name="00N2w000001rYaW" placeholder="Quantity">
+			
+	<select id="00N2w000001rUxq" name="00N2w000001rUxq">
+		<option value="">--Delivered By--</option>
+		<option value="Swiggy">Swiggy</option>
+		<option value="Zomato">Zomato</option>
+		<option value="Uber Eats">Uber Eats</option>
+		<option value="Food Panda">Food Panda</option>
+	</select>
+				
+	<textarea id="00N2w000001rhms" name="00N2w000001rhms" wrap="soft" placeholder="Delivery Point"/></textarea>
+	<input type="submit" value="Order">
+
+	</div>
+ -->
+	</div>
+	</form>
+
+</body>
+
+</html>
